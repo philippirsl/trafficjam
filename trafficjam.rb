@@ -18,7 +18,7 @@ Mail.defaults do
     password:  ENV.fetch('SMTP_PASS')
 end
 
-def send_email(subject:, body: '')
+def send_email(subject:'', body: '')
   Mail.deliver do
     to      ENV.fetch('RECIPIENT')
     from    ENV.fetch('RECIPIENT')
